@@ -7,7 +7,7 @@ const getInputValue = (id) => {
   return inputValueNum;
 };
 
-fetch('http://localhost:5000/account')
+fetch('https://simple-bank-server.onrender.com/account')
   .then((res) => res.json())
   .then((data) => dashboardData(data[0]));
 
@@ -32,7 +32,7 @@ const dashboardData = (data) => {
   document.getElementById('total-deposit').innerHTML = totalDeposit;
   document.getElementById('total-withdraw').innerHTML = totalWithdraw;
 
-  const patchUrl = `http://localhost:5000/account/${id}`;
+  const patchUrl = `https://simple-bank-server.onrender.com/account/${id}`;
 
   // Deposit button
   depositBtn.addEventListener('click', () => {
